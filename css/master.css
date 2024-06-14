@@ -1,0 +1,387 @@
+:root {
+  --grey: #181a1f;
+  --grey-light: #212328;
+  --text-light: #bdc0ca;
+  --text-dark: #525457;
+  --white: #ffffff;
+  --red: #e73334;
+  --fonth-regular: 'amatic_scregular';
+  --fonth-bold: 'amatic_scbold';
+}
+
+/*************************
+- General
+*************************/
+
+* {
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--grey);
+  font-family: 'Roboto', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+b{
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+p{
+  font-weight: 300;
+}
+
+.has-scroll-smooth {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.scrollContainer {
+  position: fixed;
+}
+
+.content-wrap {
+  position: relative;
+  z-index: 1000;
+}
+
+.title{
+  position: relative;
+  height: 50px;
+  margin: 20px 0px 30px 0px;
+}
+
+.title h1{
+  font: 40px var(--fonth-regular);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  text-shadow: -1.5px 1.5px 0px black;
+  display: inline;
+  padding: 0px 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--red);
+}
+
+.btn-primary{
+  border-radius: 30px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/*************************
+- Cursor
+*************************/
+
+.cursor-dot,
+.cursor-dot-outline {
+  pointer-events: none;
+  position: absolute;
+  z-index: 99999;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--red);
+}
+
+.cursor-dot-outline {
+  width: 30px;
+  height: 30px;
+  border: var(--red) solid 1px;
+  border-radius: 20px;
+}
+
+/*************************
+- Social-Nav
+*************************/
+
+#social-nav {
+  width: 25px;
+  position: fixed;
+  z-index: 2000;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#social-nav a {
+  display: block;
+  margin: 0px 0px 8px 0px;
+}
+
+#social-nav a:last-child{
+  margin: 0px 0px 0px 0px;
+}
+
+#social-nav a svg {
+  width: 20px;
+  height: auto;
+  fill: var(--white);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+#social-nav a:hover svg {
+  transform: scale(1.2);
+}
+
+/*************************
+- Header
+*************************/
+
+header {
+  padding: 70px 0px 40px 0px;
+}
+
+.logo-header img {
+  width: 300px;
+  margin: 0px auto 0px auto;
+  display: block;
+}
+
+header .header-nav .btn-comprar {
+  height: 170px;
+}
+
+header .header-nav .btn-contacto {
+  height: 170px;
+  margin: 5px 0px 0px 0px;
+}
+
+header .header-nav .btn-comprar,
+header .header-nav .btn-contacto {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+header .header-nav .btn-comprar:hover,
+header .header-nav .btn-contacto:hover {
+  transform: scale(1.1);
+}
+
+/*************************
+- Main
+*************************/
+
+#main .btn-primary {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#main .portadas{
+  padding: 0px 0px 0px 0px;
+}
+
+#main .portadas img {
+  width: 450px;
+}
+
+#main .cajas img {
+  width: 400px;
+}
+
+#main .cajas .agenda img {
+  width: 600px;
+  margin: 0 auto;
+  display: block;
+}
+
+/*************************
+- Main - Bitacora
+*************************/
+
+#bitacora {
+  width: auto;
+  height: 800px;
+  padding: 20px 0px 0px 0px;
+}
+
+#bitacora .scroll-bitacora {
+  display: flex;
+  width: 6000px;
+  height: 400px;
+  padding: 50px 0px 0px 0px;
+}
+
+#bitacora .item {
+  width: 500px;
+  height: 550px;
+  background-color: var(--grey-light);
+  border-radius: 10px;
+  padding: 30px;
+  color: var(--white);
+  margin: 0px 40px 0px 0px;
+}
+
+#bitacora .item:first-child{
+  margin: 0px 40px 0px 30vw;
+}
+
+/*************************
+- Main - Comprar
+*************************/
+
+#comprar .item{
+  margin: 30px 0px 70px 0px;
+  background-color: var(--grey-light);
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+}
+
+#comprar .item img{
+  margin: 0 auto;
+  width: 240px;
+  display: block;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+#comprar .item:hover img{
+  transform: scale(1.05);
+}
+
+#comprar .item .product-title p{
+  color: var(--white);
+  font-size: 18px;
+  padding: 20px 0px 0px 0px;
+  line-height: 20px;
+  margin: 0px;
+}
+
+#comprar .item .product-title span{
+  color: var(--text-light);
+  font-size: 12px;
+}
+
+#comprar .item .product-price{
+  font-size: 22px;
+  color: var(--text-dark);
+  margin: 0px;
+}
+
+#comprar .item .add-cart{
+  padding: 10px 0px 0px 0px;
+}
+
+#comprar .item .add-cart .btn-primary{
+  position: absolute;
+  padding: 14px 15px;
+  left: 20px;
+  top: 20px;
+}
+
+#comprar .item .add-cart .btn-primary svg{
+  height: 16px;
+  fill: var(--white);
+}
+
+
+/*************************
+- Main - Disfrutar
+*************************/
+
+.disfruta{
+  text-align: center;
+  padding: 0px 0px 80px 0px;
+}
+
+.disfruta p{
+  font: 28px var(--fonth-regular);
+  text-transform: uppercase;
+  color: var(--red);
+  line-height: 30px;
+  margin: 0px;
+}
+
+.disfruta span{
+  font: 28px var(--fonth-regular);
+  text-transform: uppercase;
+}
+
+/*************************
+- Main - Despachos
+*************************/
+
+.despachos{
+  padding: 0px 0px 100px 0px;
+}
+
+.despachos .title{
+  margin-bottom: 70px;
+}
+
+.despachos img{
+  width: 200px;
+  float: right;
+  margin: 0px 30px 0px 0px;
+}
+
+.despachos p{
+  font-weight: 700;
+  margin: 20px 0px 0px 0px;
+}
+
+.despachos span{
+  font-weight: 300;
+}
+
+/*************************
+- Footer
+*************************/
+
+footer{
+  background-color: var(--grey-light);
+  text-align: center;
+}
+
+footer img{
+  width: 300px;
+  margin: 70px auto 50px auto;
+  display: block;
+}
+
+footer p{
+  line-height: 10px;
+}
+
+footer p:last-child{
+  margin-bottom: 100px;
+}
+
+footer svg{
+  height: 18px;
+  fill: var(--white);
+  margin: -4px 5px 0px 0px;
+}
+
+footer svg:nth-child(even){
+  margin-left: 20px;
+}
